@@ -146,7 +146,7 @@ table {
 body {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px 1%;
+  padding: 15px 1%;
 }
 body .wrapper {
   min-height: 100vh;
@@ -156,25 +156,22 @@ body .wrapper {
   justify-content: space-between;
 }
 body .wrapper .list-note {
-  margin-bottom: 121px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 body .wrapper .list-note__item {
   background-color: rgb(87, 247, 87);
 }
 body .wrapper .add-note {
-  display: flex;
   position: sticky;
   background-color: #fff;
-  bottom: 10px;
-}
-body .wrapper .list-note__item {
-  display: flex;
+  bottom: 15px;
 }
 body .wrapper .add-note,
 body .wrapper .list-note__item {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 3px;
@@ -185,9 +182,8 @@ body .wrapper .list-note__item {
 body .wrapper .add-note .add-note__write,
 body .wrapper .list-note__item .add-note__write {
   width: 50%;
-  margin-left: 2%;
+  margin-left: 3%;
   border: none;
-  border-radius: 55px;
   font-size: 3rem;
   flex-grow: 1;
 }
@@ -196,7 +192,28 @@ body .wrapper .list-note__item .add-note__write:focus {
   outline: none;
   outline-offset: none;
 }
-body .btn {
+body .wrapper .list-note__text {
+  color: #635994;
+}
+body .wrapper .list-note__input {
+  color: #000;
+  border: none;
+}
+body .wrapper .list-note__input:focus {
+  outline: none;
+  outline-offset: none;
+}
+body .wrapper .list-note__text,
+body .wrapper .list-note__input {
+  margin-left: 2%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 3.5rem;
+}
+body .add-note__btn-add,
+body .list-note__btn-del,
+body .list-note__btn-edit {
   width: 100px;
   height: 100px;
   display: flex;
@@ -210,13 +227,14 @@ body .btn {
   font-size: 3.5rem;
   line-height: 3.5rem;
 }
-body .btn:hover {
+body .add-note__btn-add:hover,
+body .list-note__btn-del:hover,
+body .list-note__btn-edit:hover {
   cursor: pointer;
 }
-body .btn:active {
+body .add-note__btn-add:active,
+body .list-note__btn-del:active,
+body .list-note__btn-edit:active {
   transform: scale(0.9);
   transition: 0.2s all;
-}
-body #save-note {
-  display: none;
 }/*# sourceMappingURL=style.css.map */
