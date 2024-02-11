@@ -171,9 +171,11 @@ body .wrapper .add-note {
 }
 body .wrapper .add-note,
 body .wrapper .list-note__item {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  overflow: hidden;
   padding: 3px;
   gap: 3px;
   border: 3px solid #000;
@@ -192,28 +194,40 @@ body .wrapper .list-note__item .add-note__write:focus {
   outline: none;
   outline-offset: none;
 }
-body .wrapper .list-note__text {
-  color: #635994;
-}
-body .wrapper .list-note__input {
-  color: #000;
-  border: none;
-}
-body .wrapper .list-note__input:focus {
-  outline: none;
-  outline-offset: none;
-}
 body .wrapper .list-note__text,
 body .wrapper .list-note__input {
-  margin-left: 2%;
+  width: 80%;
+  margin: 0 1%;
   display: flex;
   align-items: center;
   flex-grow: 1;
   font-size: 3.5rem;
 }
-body .add-note__btn-add,
-body .list-note__btn-del,
-body .list-note__btn-edit {
+body .wrapper .list-note__input {
+  color: #000;
+  border: none;
+}
+body .wrapper .list-note__text {
+  color: #635994;
+}
+body .wrapper .list-note__text:hover {
+  animation: text 5s infinite linear;
+}
+@keyframes text {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+body .wrapper .list-note__input:focus {
+  outline: none;
+  outline-offset: none;
+}
+body .wrapper .add-note__btn-add,
+body .wrapper .list-note__btn-del,
+body .wrapper .list-note__btn-edit {
   width: 100px;
   height: 100px;
   display: flex;
@@ -226,15 +240,16 @@ body .list-note__btn-edit {
   transition: 0.8s all;
   font-size: 3.5rem;
   line-height: 3.5rem;
+  z-index: 1;
 }
-body .add-note__btn-add:hover,
-body .list-note__btn-del:hover,
-body .list-note__btn-edit:hover {
+body .wrapper .add-note__btn-add:hover,
+body .wrapper .list-note__btn-del:hover,
+body .wrapper .list-note__btn-edit:hover {
   cursor: pointer;
 }
-body .add-note__btn-add:active,
-body .list-note__btn-del:active,
-body .list-note__btn-edit:active {
+body .wrapper .add-note__btn-add:active,
+body .wrapper .list-note__btn-del:active,
+body .wrapper .list-note__btn-edit:active {
   transform: scale(0.9);
   transition: 0.2s all;
 }/*# sourceMappingURL=style.css.map */

@@ -28,9 +28,11 @@ body {
 
     .add-note,
     .list-note__item {
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      overflow: hidden;
       padding: 3px;
       gap: 3px;
       border: 3px solid #000;
@@ -49,57 +51,70 @@ body {
         outline-offset: none;
       }
     }
+    .list-note__text,
+    .list-note__input {
+      width: 80%;
+      margin: 0 1%;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      font-size: 3.5rem;
+    }
+    .list-note__input {
+      color: #000;
+      border: none;
+    }
 
     .list-note__text {
       color: #635994;
     }
 
-    .list-note__input {
-      color: #000;
-      border: none;
+    .list-note__text:hover {
+      animation: text 5s infinite linear;
+    }
+
+    @keyframes text {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(-100%, 0);
+      }
     }
 
     .list-note__input:focus {
       outline: none;
       outline-offset: none;
     }
-
-    .list-note__text,
-    .list-note__input {
-      margin-left: 2%;
+    .add-note__btn-add,
+    .list-note__btn-del,
+    .list-note__btn-edit {
+      width: 100px;
+      height: 100px;
       display: flex;
+      flex-direction: row;
+      justify-content: center;
       align-items: center;
-      flex-grow: 1;
+      border-radius: 50%;
+      border: 3px solid #000;
+      background-color: lightgray;
+      transition: 0.8s all;
       font-size: 3.5rem;
+      line-height: 3.5rem;
+      z-index: 1;
     }
-  }
 
-  .add-note__btn-add,
-  .list-note__btn-del,
-  .list-note__btn-edit {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 3px solid #000;
-    background-color: lightgray;
-    transition: 0.8s all;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
-  }
-  .add-note__btn-add:hover,
-  .list-note__btn-del:hover,
-  .list-note__btn-edit:hover {
-    cursor: pointer;
-  }
+    .add-note__btn-add:hover,
+    .list-note__btn-del:hover,
+    .list-note__btn-edit:hover {
+      cursor: pointer;
+    }
 
-  .add-note__btn-add:active,
-  .list-note__btn-del:active,
-  .list-note__btn-edit:active {
-    transform: scale(0.9);
-    transition: 0.2s all;
+    .add-note__btn-add:active,
+    .list-note__btn-del:active,
+    .list-note__btn-edit:active {
+      transform: scale(0.9);
+      transition: 0.2s all;
+    }
   }
 }
